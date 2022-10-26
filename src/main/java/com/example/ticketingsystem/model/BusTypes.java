@@ -38,43 +38,61 @@ public class BusTypes {
         this.capacity = capacity;
     }
 
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
     public String getName() {
+
         return name;
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public String getNumberPlate() {
+
         return numberPlate;
     }
 
     public void setNumberPlate(String numberPlate) {
+
         this.numberPlate = numberPlate;
     }
 
     public Date getDay() {
+
         return day;
     }
 
     public void setDay(Date day) {
+
         this.day = day;
     }
 
     public Time getTime() {
+
         return time;
     }
 
     public void setTime(Time time) {
+
         this.time = time;
     }
 
     public int getCapacity() {
+
         return capacity;
     }
 
     public void setCapacity(int capacity) {
+
         this.capacity = capacity;
     }
 }
