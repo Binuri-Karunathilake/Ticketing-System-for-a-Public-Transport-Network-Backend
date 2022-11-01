@@ -18,10 +18,7 @@ public class BusTypes {
     private String numberPlate;
 
     @Column(name="day")
-    private Date day;
-
-    @Column(name="time")
-    private Time time;
+    private String day;
 
     @Column(name="capacity")
     private int capacity;
@@ -35,12 +32,12 @@ public class BusTypes {
 
     }
 
-    public BusTypes(String name, String numberPlate, Date day, Time time, int capacity) {
+    public BusTypes(String name, String numberPlate, String day, int capacity, long route) {
         this.name = name;
         this.numberPlate = numberPlate;
         this.day = day;
-        this.time = time;
         this.capacity = capacity;
+        this.route = route;
     }
 
     public long getId() {
@@ -71,24 +68,14 @@ public class BusTypes {
         this.numberPlate = numberPlate;
     }
 
-    public Date getDay() {
+    public String getDay() {
 
         return day;
     }
 
-    public void setDay(Date day) {
+    public void setDay(String day) {
 
         this.day = day;
-    }
-
-    public Time getTime() {
-
-        return time;
-    }
-
-    public void setTime(Time time) {
-
-        this.time = time;
     }
 
     public int getCapacity() {

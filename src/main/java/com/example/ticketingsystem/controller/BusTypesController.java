@@ -45,7 +45,6 @@ public class BusTypesController {
         BusTypes1.setName(BusTypes.getName());
         BusTypes1.setNumberPlate(BusTypes.getNumberPlate());
         BusTypes1.setDay(BusTypes.getDay());
-        BusTypes1.setTime(BusTypes.getTime());
         BusTypes1.setCapacity(BusTypes.getCapacity());
         BusTypes1.setRoute(BusTypes.getRoute());
 
