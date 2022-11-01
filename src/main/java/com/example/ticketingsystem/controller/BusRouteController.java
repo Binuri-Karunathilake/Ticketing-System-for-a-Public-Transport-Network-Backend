@@ -24,12 +24,6 @@ public class BusRouteController {
         return busRouteRepository.findAll();
     }
 
-    /** Add employee method */
-    @PostMapping("/busRoutes/addRoute")
-    public BusRoute createBusRoute(@RequestBody BusRoute busRoute){
-        return busRouteRepository.save(busRoute);
-    }
-
     @GetMapping("/busRoutes/{id}")
     public ResponseEntity<BusRoute> getRouteById(@PathVariable Long id){
         BusRoute busRoute = busRouteRepository.findById(id)
@@ -57,6 +51,12 @@ public class BusRouteController {
         Map<String, Boolean> response = new HashMap<>();
         response.put("deleted", Boolean.TRUE);
         return ResponseEntity.ok(response);
+    }
+
+    /** Add employee method */
+    @PostMapping("/busRoutes/addRoute")
+    public BusRoute createBusRoute(@RequestBody BusRoute busRoute){
+        return busRouteRepository.save(busRoute);
     }
 
 }
