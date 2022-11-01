@@ -26,6 +26,11 @@ public class BusTypes {
     @Column(name="capacity")
     private int capacity;
 
+    @Column(name="route")
+    private long route;
+
+
+
     public BusTypes() {
 
     }
@@ -89,6 +94,14 @@ public class BusTypes {
     public int getCapacity() {
 
         return capacity;
+    }
+
+    public long getRoute() {
+        return route;
+    }
+
+    public void setRoute(long route) {
+        this.route = route;
     }
 
     public void setCapacity(int capacity) {

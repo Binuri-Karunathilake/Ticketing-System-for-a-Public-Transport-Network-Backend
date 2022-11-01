@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
+@CrossOrigin(origins = "http://localhost:3000/")
 @RestController
 @RequestMapping("/api/v1/")
 public class BusTypesController {
@@ -28,6 +28,7 @@ public class BusTypesController {
     // Add BusType method
     @PostMapping("/BusTypes/AddType")
     public BusTypes createBusTypes(@RequestBody BusTypes BusTypes){
+
         return BusTypesRepository.save(BusTypes);
     }
     @GetMapping("/BusTypes/{id}")
@@ -46,6 +47,7 @@ public class BusTypesController {
         BusTypes1.setDay(BusTypes.getDay());
         BusTypes1.setTime(BusTypes.getTime());
         BusTypes1.setCapacity(BusTypes.getCapacity());
+        BusTypes1.setRoute(BusTypes.getRoute());
 
        BusTypes updatedBusTypes = BusTypesRepository.save(BusTypes1);
        return ResponseEntity.ok(updatedBusTypes);
