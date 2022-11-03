@@ -24,6 +24,7 @@ public class BusRouteController {
         return busRouteRepository.findAll();
     }
 
+    @CrossOrigin
     @GetMapping("/busRoutes/{id}")
     public ResponseEntity<BusRoute> getRouteById(@PathVariable Long id){
         BusRoute busRoute = busRouteRepository.findById(id)
